@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textRecommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageRecommendation"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:maxWidth="160dp"
+        android:maxHeight="40dp"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/priceRecommendation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textRecommendation"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="100"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/priceCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textRecommendation"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/priceRecommendation"
+        android:fontFamily="@font/montserrat_regular"
+        android:text="@string/currency"
+        android:textColor="@color/blue"
+        android:textSize="16sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:id="@+id/imageRecommendation"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp">
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/imageView1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/food_0">
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
