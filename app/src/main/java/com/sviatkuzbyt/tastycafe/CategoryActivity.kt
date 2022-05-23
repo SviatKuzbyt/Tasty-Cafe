@@ -30,6 +30,7 @@ class CategoryActivity : AppCompatActivity() {
 
         adapter = list?.let { ListsAdapter(this, it) }
         listCategory.adapter = adapter
+        listCategory.isHorizontalFadingEdgeEnabled = true
         listCategory.setOnItemClickListener { _, _, i, _ ->
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("id", list!![i].id)

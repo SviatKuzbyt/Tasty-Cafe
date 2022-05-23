@@ -8,14 +8,11 @@
         android:id="@+id/textRecommendation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageRecommendation"
-        android:layout_marginTop="10dp"
         android:fontFamily="@font/montserrat_regular"
-        android:maxWidth="160dp"
-        android:maxHeight="40dp"
         android:text="TextView"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_marginStart="180dp"/>
 
     <TextView
         android:id="@+id/priceRecommendation"
@@ -26,7 +23,8 @@
         android:fontFamily="@font/montserrat_regular"
         android:text="100"
         android:textColor="@color/blue"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_marginStart="180dp"/>
 
     <TextView
         android:id="@+id/priceCurrency"
@@ -49,7 +47,7 @@
         <ImageView
             android:layout_height="match_parent"
             android:layout_width="match_parent"
-            android:id="@+id/imageView1"
+            android:id="@+id/imageViewRecommendation"
             android:scaleType="centerCrop"
             android:src="@drawable/food_0">
         </ImageView>
