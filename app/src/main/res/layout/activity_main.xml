@@ -27,7 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/recommendationText"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="20dp"
+            android:animationCache="false" />
 
         <TextView
             android:id="@+id/menuText"

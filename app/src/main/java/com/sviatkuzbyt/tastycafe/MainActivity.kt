@@ -1,8 +1,9 @@
 package com.sviatkuzbyt.tastycafe
 
+
 import android.content.Intent
 import android.os.Bundle
-import android.util.DisplayMetrics
+import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -29,6 +30,27 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         listsRecommendation.layoutManager = layoutManager
 
+        val intent2 = Intent(this, DetailActivity::class.java)
+        listsRecommendation.addOnItemTouchListener(
+            RecyclerItemClickListener(this,
+                listsRecommendation,
+                object : RecyclerItemClickListener.OnItemClickListener {
+                    override fun onItemClick(view: View?, position: Int) {
+                        intent2.putExtra("id", list[position].id)
+                        startActivity(intent2)
+                    }
+
+                    override fun onLongItemClick(view: View?, position: Int) {
+                        // do whatever
+                    }
+                })
+        )
+
+        listsRecommendation.setOnClickListener {
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("id", list[2].id)
+            startActivity(intent)
+        }
 
         textSalad.setOnClickListener {
             val myIntent = Intent(this, CategoryActivity::class.java)
