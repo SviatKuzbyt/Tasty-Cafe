@@ -3,11 +3,16 @@ package com.sviatkuzbyt.tastycafe
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.io.ObjectOutputStream
 
 
 class MainActivity : AppCompatActivity() {
@@ -47,33 +52,60 @@ class MainActivity : AppCompatActivity() {
         )
 
         listsRecommendation.setOnClickListener {
+            Toast.makeText(this, "Відкриття...", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("id", list[2].id)
             startActivity(intent)
         }
 
         textSalad.setOnClickListener {
+            Toast.makeText(this, "Відкриття...", Toast.LENGTH_SHORT).show()
             val myIntent = Intent(this, CategoryActivity::class.java)
             myIntent.putExtra("group", 0)
             startActivity(myIntent)
         }
 
         textDish.setOnClickListener {
+            Toast.makeText(this, "Відкриття...", Toast.LENGTH_SHORT).show()
             val myIntent = Intent(this, CategoryActivity::class.java)
             myIntent.putExtra("group", 1)
             startActivity(myIntent)
         }
 
         textDrinks.setOnClickListener {
+            Toast.makeText(this, "Відкриття...", Toast.LENGTH_SHORT).show()
             val myIntent = Intent(this, CategoryActivity::class.java)
             myIntent.putExtra("group", 2)
             startActivity(myIntent)
         }
 
         textDesert.setOnClickListener {
+            Toast.makeText(this, "Відкриття...", Toast.LENGTH_SHORT).show()
             val myIntent = Intent(this, CategoryActivity::class.java)
             myIntent.putExtra("group", 3)
             startActivity(myIntent)
         }
+
+        setSupportActionBar(findViewById(R.id.toolbarMain))
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.main_bar, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.order_btn -> {
+            startActivity(Intent(this, CategoryActivity::class.java))
+            true
+        }
+        R.id.search_btn -> {
+            startActivity(Intent(this, CategoryActivity::class.java))
+            true
+        }
+        else -> { super.onOptionsItemSelected(item) }
     }
 }

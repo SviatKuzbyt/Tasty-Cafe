@@ -41,4 +41,7 @@
     <string name="none"> </string>
 
     <string name="get_order">Замовити</string>
+    <string name="undo">Назад</string>
+    <string name="order_btn">Замовлення</string>
+    <string name="search">Пошук</string>
 </resources>

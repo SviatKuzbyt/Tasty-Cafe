@@ -2,6 +2,8 @@ package com.sviatkuzbyt.tastycafe
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 
@@ -23,6 +25,9 @@ class DetailActivity : AppCompatActivity() {
         priceProduct.text = listMenu[id].price.toString()
         weightProduct.text = listMenu[id].weight
         textInfo.text = getString(listMenu[id].info)
+
+        val buttonUndoDetail = findViewById<ImageButton>(R.id.buttonUndoDetail)
+        buttonUndoDetail.setOnClickListener { finish() }
 
     }
 }

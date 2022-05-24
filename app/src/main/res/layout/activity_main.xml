@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,167 +7,202 @@
     tools:context=".MainActivity"
     android:orientation="vertical">
 
-    <RelativeLayout
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
-
-        <TextView
-            android:id="@+id/recommendationText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="@string/recommendation"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listRecommendation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/recommendationText"
-            android:layout_marginTop="20dp"
-            android:animationCache="false" />
-
-        <TextView
-            android:id="@+id/menuText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/listRecommendation"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="@string/menu"
-            android:textColor="@color/black"
-            android:textSize="24sp" />
-
+        android:background="@color/white"
+        android:minHeight="60dp"
+        android:nestedScrollingEnabled="false"
+        android:theme="?attr/actionBarTheme"
+        android:textAlignment="gravity">
         <ImageView
-            android:id="@+id/imageSalad"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:layout_below="@id/menuText"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/salad" />
-
+            android:src="@drawable/app_icon" />
         <TextView
-            android:id="@+id/textSalad"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/menuText"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imageSalad"
-            android:fontFamily="@font/montserrat_regular"
-            android:gravity="center_vertical"
-            android:text="@string/salad"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <ImageView
-            android:id="@+id/imageDish"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/imageSalad"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/dish" />
-
-        <TextView
-            android:id="@+id/textDish"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/textSalad"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imageDish"
-            android:fontFamily="@font/montserrat_regular"
-            android:gravity="center_vertical"
-            android:text="@string/dish"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <ImageView
-            android:id="@+id/imageDrinks"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/imageDish"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/cocktail" />
-
-        <TextView
-            android:id="@+id/textDrinks"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/textDish"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imageDrinks"
-            android:fontFamily="@font/montserrat_regular"
-            android:gravity="center_vertical"
-            android:text="@string/drinks"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <ImageView
-            android:id="@+id/imageDesert"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_below="@id/imageDrinks"
-            android:layout_marginTop="20dp"
-            app:srcCompat="@drawable/ice_cream" />
-
-        <TextView
-            android:id="@+id/textDesert"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_below="@id/textDrinks"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imageDrinks"
-            android:fontFamily="@font/montserrat_regular"
-            android:gravity="center_vertical"
-            android:text="@string/desert"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <TextView
-            android:id="@+id/textAbout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/imageDesert"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/montserrat_medium"
-            android:text="@string/about"
+            android:text="@string/app_name"
+            android:fontFamily="@font/montserrat_regular"
+            android:textSize="18sp"
             android:textColor="@color/black"
-            android:textSize="24sp" />
+            android:paddingStart="10dp"/>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/imgAbout"
-            android:layout_width="wrap_content"
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/textAbout"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp">
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/recommendationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/recommendation"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listRecommendation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/recommendationText"
+                android:layout_marginTop="20dp"
+                android:animationCache="false" />
+
+            <TextView
+                android:id="@+id/menuText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/listRecommendation"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/menu"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
             <ImageView
-                android:id="@+id/imageCafe"
-                android:layout_width="100dp"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/cafe_photo" />
-        </androidx.cardview.widget.CardView>
+                android:id="@+id/imageSalad"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/menuText"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/salad" />
 
-        <TextView
-            android:id="@+id/textAbout1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/textAbout"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_toEndOf="@+id/imgAbout"
-            android:fontFamily="@font/montserrat_regular"
-            android:text="@string/about_text1"
-            android:textColor="@color/black"
-            android:textSize="14sp" />
-    </RelativeLayout>
-</ScrollView>
+            <TextView
+                android:id="@+id/textSalad"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/menuText"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/imageSalad"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:text="@string/salad"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageDish"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/imageSalad"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/dish" />
+
+            <TextView
+                android:id="@+id/textDish"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/textSalad"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/imageDish"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:text="@string/dish"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageDrinks"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/imageDish"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/cocktail" />
+
+            <TextView
+                android:id="@+id/textDrinks"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/textDish"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/imageDrinks"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:text="@string/drinks"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/imageDesert"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/imageDrinks"
+                android:layout_marginTop="20dp"
+                app:srcCompat="@drawable/ice_cream" />
+
+            <TextView
+                android:id="@+id/textDesert"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/textDrinks"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/imageDrinks"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center_vertical"
+                android:text="@string/desert"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageDesert"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="@string/about"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imgAbout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textAbout"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/imageCafe"
+                    android:layout_width="100dp"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/cafe_photo" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textAbout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textAbout"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/imgAbout"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="@string/about_text1"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>
