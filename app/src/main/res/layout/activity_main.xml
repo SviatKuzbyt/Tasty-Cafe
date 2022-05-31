@@ -20,7 +20,8 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/app_icon" />
+            android:src="@drawable/app_icon"
+            android:contentDescription="@string/image" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,7 +29,7 @@
             android:fontFamily="@font/montserrat_regular"
             android:textSize="18sp"
             android:textColor="@color/black"
-            android:paddingStart="10dp"/>
+            android:paddingHorizontal="10dp"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -73,7 +74,8 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:text="@string/menu"
                 android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textSize="24sp"
+                />
 
             <ImageView
                 android:id="@+id/imageSalad"
@@ -81,7 +83,10 @@
                 android:layout_height="40dp"
                 android:layout_below="@id/menuText"
                 android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/salad" />
+                android:contentDescription="@string/image"
+                android:onClick="onClickSalad"
+                app:srcCompat="@drawable/salad"
+                tools:ignore="TouchTargetSizeCheck,,DuplicateSpeakableTextCheck" />
 
             <TextView
                 android:id="@+id/textSalad"
@@ -93,9 +98,11 @@
                 android:layout_toEndOf="@+id/imageSalad"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center_vertical"
+                android:onClick="onClickSalad"
                 android:text="@string/salad"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageView
                 android:id="@+id/imageDish"
@@ -103,7 +110,10 @@
                 android:layout_height="40dp"
                 android:layout_below="@id/imageSalad"
                 android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/dish" />
+                android:onClick="onClickDish"
+                app:srcCompat="@drawable/dish"
+                tools:ignore="TouchTargetSizeCheck"
+                android:contentDescription="@string/image"/>
 
             <TextView
                 android:id="@+id/textDish"
@@ -115,9 +125,11 @@
                 android:layout_toEndOf="@+id/imageDish"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center_vertical"
+                android:onClick="onClickDish"
                 android:text="@string/dish"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageView
                 android:id="@+id/imageDrinks"
@@ -125,7 +137,10 @@
                 android:layout_height="40dp"
                 android:layout_below="@id/imageDish"
                 android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/cocktail" />
+                android:onClick="onClickDrinks"
+                app:srcCompat="@drawable/cocktail"
+                tools:ignore="TouchTargetSizeCheck"
+                android:contentDescription="@string/image"/>
 
             <TextView
                 android:id="@+id/textDrinks"
@@ -137,9 +152,11 @@
                 android:layout_toEndOf="@+id/imageDrinks"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center_vertical"
+                android:onClick="onClickDrinks"
                 android:text="@string/drinks"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageView
                 android:id="@+id/imageDesert"
@@ -147,7 +164,10 @@
                 android:layout_height="40dp"
                 android:layout_below="@id/imageDrinks"
                 android:layout_marginTop="20dp"
-                app:srcCompat="@drawable/ice_cream" />
+                android:onClick="onClickDesert"
+                app:srcCompat="@drawable/ice_cream"
+                tools:ignore="TouchTargetSizeCheck"
+                android:contentDescription="@string/image"/>
 
             <TextView
                 android:id="@+id/textDesert"
@@ -159,9 +179,11 @@
                 android:layout_toEndOf="@+id/imageDrinks"
                 android:fontFamily="@font/montserrat_regular"
                 android:gravity="center_vertical"
+                android:onClick="onClickDesert"
                 android:text="@string/desert"
                 android:textColor="@color/black"
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <TextView
                 android:id="@+id/textAbout"
@@ -188,7 +210,8 @@
                     android:layout_width="100dp"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/cafe_photo" />
+                    android:src="@drawable/cafe_photo"
+                    android:contentDescription="@string/image"/>
             </androidx.cardview.widget.CardView>
 
             <TextView

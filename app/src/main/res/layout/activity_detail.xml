@@ -15,20 +15,22 @@
             android:id="@+id/imageProduct"
             android:layout_width="wrap_content"
             android:layout_height="260dp"
+            android:contentDescription="@string/image"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/food_0" />
+            app:srcCompat="@drawable/food_0"
+            tools:ignore="ImageContrastCheck" />
 
         <ImageButton
             android:id="@+id/buttonUndoDetail"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
             android:background="#00FFFFFF"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/back_btn_white" />
+            android:contentDescription="@string/undo"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/back_btn_white"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:id="@+id/titleProduct"
@@ -38,7 +40,6 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/montserrat_medium"
-            android:text="TextView"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="24sp"
@@ -58,7 +59,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/montserrat_medium"
-                android:text="210 grn"
                 android:textColor="@color/blue"
                 android:textSize="16sp" />
 
@@ -69,16 +69,15 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:text="@string/currency"
                 android:textColor="@color/blue"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
 
             <TextView
                 android:id="@+id/weightProduct"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/priceProduct"
                 android:fontFamily="@font/montserrat_medium"
-                android:layout_marginStart="10dp"
-                android:text="300 g" />
+                android:layout_marginStart="10dp" />
         </LinearLayout>
 
 
@@ -88,21 +87,38 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/goalText"
             android:layout_centerHorizontal="true"
-            android:layout_marginVertical="20dp"
             android:layout_marginHorizontal="40dp"
+            android:layout_marginVertical="20dp"
             android:background="@drawable/button_add"
+            android:elevation="0dp"
             android:fontFamily="@font/montserrat_medium"
             android:text="@string/get_order"
+            android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@color/white"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/orderText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/buttonAdd"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/montserrat_regular"
+            android:text="@string/go_orders"
+            android:textAllCaps="false"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:visibility="gone"/>
 
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="?android:attr/listDivider"
-            android:layout_below="@id/buttonAdd" />
+            android:layout_below="@id/buttonAdd"
+            android:background="?android:attr/listDivider" />
 
         <TextView
             android:id="@+id/textInfo"
@@ -114,10 +130,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/montserrat_regular"
-            android:text="TextView"
             android:textColor="@color/black"
             android:textSize="16sp" />
-
     </RelativeLayout>
-
 </ScrollView>

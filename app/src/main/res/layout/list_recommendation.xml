@@ -9,7 +9,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat_regular"
-        android:text="TextView"
         android:textColor="@color/black"
         android:textSize="16sp"
         android:layout_marginStart="180dp"/>
@@ -20,8 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/textRecommendation"
         android:layout_marginTop="5dp"
-        android:fontFamily="@font/montserrat_regular"
-        android:text="100"
+        android:fontFamily="@font/montserrat_medium"
         android:textColor="@color/blue"
         android:textSize="16sp"
         android:layout_marginStart="180dp"/>
@@ -33,7 +31,7 @@
         android:layout_below="@id/textRecommendation"
         android:layout_marginTop="5dp"
         android:layout_toEndOf="@+id/priceRecommendation"
-        android:fontFamily="@font/montserrat_regular"
+        android:fontFamily="@font/montserrat_medium"
         android:text="@string/currency"
         android:textColor="@color/blue"
         android:textSize="16sp" />
@@ -49,7 +47,8 @@
             android:layout_width="match_parent"
             android:id="@+id/imageViewRecommendation"
             android:scaleType="centerCrop"
-            android:src="@drawable/food_0">
+            android:src="@drawable/food_0"
+            android:contentDescription="@string/image">
         </ImageView>
     </androidx.cardview.widget.CardView>
 

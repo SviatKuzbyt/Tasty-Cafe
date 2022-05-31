@@ -12,6 +12,5 @@
     <style name="ToolbarStyle">
         <item name="android:fontFamily">@font/montserrat_regular</item>
         <item name="android:textSize">18sp</item>
-
     </style>
 </resources>

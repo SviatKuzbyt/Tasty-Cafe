@@ -1,12 +1,12 @@
 package com.sviatkuzbyt.tastycafe;
 
 import android.content.Context;
-
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 
+//Я не знаю як працює цей код, бо він взятий з інтернету, але основне це те, що він працює)
 
 public class RecyclerItemClickListener implements RecyclerView.OnItemTouchListener {
     private OnItemClickListener mListener;
