@@ -57,11 +57,8 @@ class MainActivity : AppCompatActivity() {
     //Функціонал шапки
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.order_btn -> {
-            startActivity(Intent(this, OrderActivity::class.java))
-            true
-        }
-        R.id.search_btn -> {
-            startActivity(Intent(this, SearchActivity::class.java))
+            if (listOrders.isEmpty()) Toast.makeText(this, "Ви нічого не замовили", Toast.LENGTH_SHORT).show()
+            else startActivity(Intent(this, OrderActivity::class.java))
             true
         }
         else -> { super.onOptionsItemSelected(item) }

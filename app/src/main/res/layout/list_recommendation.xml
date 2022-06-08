@@ -42,14 +42,13 @@
         android:id="@+id/imageRecommendation"
         app:cardCornerRadius="10dp"
         app:cardElevation="0dp">
+
         <ImageView
-            android:layout_height="match_parent"
-            android:layout_width="match_parent"
             android:id="@+id/imageViewRecommendation"
-            android:scaleType="centerCrop"
-            android:src="@drawable/food_0"
-            android:contentDescription="@string/image">
-        </ImageView>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image"
+            android:scaleType="centerCrop" />
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

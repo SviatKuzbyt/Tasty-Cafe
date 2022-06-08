@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CategoryActivity"
+    android:orientation="vertical"
     >
 
     <androidx.appcompat.widget.Toolbar
@@ -22,12 +23,10 @@
         android:id="@+id/dividerCategory"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="?android:attr/listDivider"
-        android:layout_below="@id/toolbarCategory"/>
+        android:background="?android:attr/listDivider" />
 
     <ListView
         android:id="@+id/list_category"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/dividerCategory" />
-</RelativeLayout>
+        android:layout_height="wrap_content" />
+</LinearLayout>

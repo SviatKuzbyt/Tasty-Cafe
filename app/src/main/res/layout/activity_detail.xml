@@ -88,9 +88,9 @@
             android:layout_below="@id/goalText"
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="40dp"
-            android:layout_marginVertical="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
             android:background="@drawable/button_add"
-            android:elevation="0dp"
             android:fontFamily="@font/montserrat_medium"
             android:text="@string/get_order"
             android:textAlignment="center"
@@ -102,11 +102,12 @@
         <TextView
             android:id="@+id/orderText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_below="@id/buttonAdd"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:fontFamily="@font/montserrat_regular"
+            android:gravity="center"
             android:text="@string/go_orders"
             android:textAllCaps="false"
             android:textColor="@color/blue"
@@ -132,5 +133,6 @@
             android:fontFamily="@font/montserrat_regular"
             android:textColor="@color/black"
             android:textSize="16sp" />
+
     </RelativeLayout>
 </ScrollView>

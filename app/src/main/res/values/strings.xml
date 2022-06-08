@@ -38,7 +38,9 @@
     <string name="desert">Десерти</string>
     <string name="about">Про нас</string>
     <string name="currency">\ грн</string>
-    <string name="about_text1">Tasty cafe – комфортний заклад громадського харчування, з доступними цінами та смачними стравами. Наші працівники зроблять все, щоб вас час проводження у нашому закладі був найкращим. І в нас є смачна кава)\n\nГрафік роботи: пн–пт 8:00 – 19:00; сб–нд 8:00 – 22:00\nВул. Шевченка 28 а; +380 96 656 5454\n\nРозробив Sviatoslav Kuzbyt, демонстраційний додаток</string>
+    <string name="about_text1">Tasty cafe – комфортний заклад громадського харчування, з доступними цінами та смачними стравами. Наші працівники зроблять все, щоб вас час проводження у нашому закладі був найкращим. І в нас є смачна кава)
+        \n\nГрафік роботи: пн–пт 8:00 – 19:00; сб–нд 8:00 – 22:00\nВул. Шевченка 28 а; +380 96 656 5454
+        \n\nРозробив Sviat Kuzbyt, демонстраційний додаток. Травень - червень 2022</string>
     <string name="none"> </string>
 
     <!--    Інше-->
@@ -49,4 +51,13 @@
     <string name="go_orders"><u>Переглянути замовлення</u></string>
     <string name="delete_order_btn">Видалити замовлення</string>
     <string name="image">Зображення</string>
+    <string name="delete">Видалити</string>
+    <string name="sum">Сума:\ </string>
+    <string name="delete_orders">Видалити всі замовлення</string>
+    <string name="deleteOrdersWarming">Видалити всі замовлення?</string>
+    <string name="yes">Так</string>
+    <string name="no">Ні</string>
+    <string name="create_order">Створити замовлення</string>
+    <string name="titleQR">Створення замовлення</string>
+    <string name="textQR">Підійдіть на касу і покажіть працівнику QR-код нижче:</string>
 </resources>

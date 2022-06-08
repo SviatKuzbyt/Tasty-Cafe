@@ -18,7 +18,7 @@ class CategoryActivity : AppCompatActivity() {
         //Відкриття категорії
         if (intent.getIntExtra("group", 0) == 0){
             list = arrayOf(listMenu[0], listMenu[1], listMenu[2], listMenu[3], listMenu[4], listMenu[5])
-            title = "Салати"
+            title = "Салати та закуски"
         }
         else if (intent.getIntExtra("group", 0) == 1){
             list = arrayOf(listMenu[6], listMenu[7], listMenu[8], listMenu[9], listMenu[10], listMenu[11], listMenu[12])

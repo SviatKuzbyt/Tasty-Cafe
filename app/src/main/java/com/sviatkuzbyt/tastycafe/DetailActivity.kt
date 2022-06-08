@@ -16,6 +16,7 @@ class DetailActivity : AppCompatActivity() {
     private var orderText: TextView? = null
     private var divider: View? = null
     private val params = RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
+    var id: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +34,7 @@ class DetailActivity : AppCompatActivity() {
         divider = findViewById(R.id.divider)
 
         //Заміна представлень
-        val id = intent.getIntExtra("id", 0)
+        id = intent.getIntExtra("id", 0)
 
         imageProduct.setImageResource(listMenu[id].image)
         titleProduct.text = listMenu[id].name
@@ -51,6 +52,7 @@ class DetailActivity : AppCompatActivity() {
         addButton?.setOnClickListener {
             if (listMenu[id] in listOrders){ //Видалення замовлення
                 setButton(false)
+                if (listMenu[id].number > 1) listMenu[id].number = 1
                 listOrders.remove(listMenu[id])
             }
             else{ //Додавання замовлення
@@ -61,6 +63,11 @@ class DetailActivity : AppCompatActivity() {
 
         //Функціонал
         orderText?.setOnClickListener { startActivity(Intent(this, OrderActivity::class.java)) }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (listMenu[id] !in listOrders){ setButton(false) }
     }
 
     //Встановлення вигляду кнопки
